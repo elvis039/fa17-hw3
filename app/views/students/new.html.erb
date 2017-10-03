@@ -1,0 +1,24 @@
+<%= form_tag students_form_path do %>
+	<p>
+		<%= label_tag(nil, "First Name") %>
+		<%= text_field_tag(:first_name, nil, placeholder: @placeholder_first_name) %>
+	</p>
+
+	<p>
+		<%= label_tag(nil, "Last Name") %>
+		<%= text_field_tag(:last_name, nil, placeholder: @placeholder_last_name) %>
+	</p>
+
+	<p>
+		<%= label_tag(nil, "Year") %>
+		<%= text_field_tag(:year, nil, placeholder: @placeholder_year) %>
+	</p>	
+
+	<p>
+		<%= label_tag(nil, "Major") %>
+		<%= text_field_tag(:major, nil, placeholder: @placeholder_major) %>
+	</p>	
+
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	<%= submit_tag("Create student") %>
+<% end %>
